@@ -3,6 +3,7 @@ import Container from "./Container";
 import icons from "../icons";
 import HeadingLabel from "./HeadingLabel";
 import Benefit from "./Benefit";
+import SectionHeading from "./SectionHeading";
 
 export default function Benefits() {
     const benefits_g1 = [
@@ -36,10 +37,10 @@ export default function Benefits() {
                 <div className="flex flex-col items-center gap-y-6">
                     <HeadingLabel text="Benefits" />
 
-                    <h2 className="text-4xl font-semibold">
+                    <SectionHeading>
                         Why you&apos;ll love travelling with Travel
                         <span className="text-orange-600">Buddy</span>
-                    </h2>
+                    </SectionHeading>
                 </div>
 
                 <div className="mt-12">

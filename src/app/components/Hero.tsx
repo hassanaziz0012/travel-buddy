@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import icons from "../icons";
+import WhiteExternalButton from "./WhiteExternalButton";
 
 export default function Hero() {
     return (
@@ -13,10 +14,7 @@ export default function Hero() {
                         </h1>
 
                         <div>
-                            <button className="px-8 py-3 rounded-lg bg-white hover:bg-slate-200 duration-300 hover:cursor-pointer text-black font-bold text-lg uppercase flex items-end gap-x-2">
-                                <span>Plan Your Trip</span>
-                                <span className="fill-orange-600">{icons.externalLink}</span>
-                            </button>
+                            <WhiteExternalButton text="Plan your trip" />
                         </div>
                     </div>
 

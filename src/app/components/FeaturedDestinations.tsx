@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./Container";
 import HeadingLabel from "./HeadingLabel";
 import icons from "../icons";
+import SectionHeading from "./SectionHeading";
 
 export default function FeaturedDestinations() {
     const destinations = [
@@ -35,10 +36,10 @@ export default function FeaturedDestinations() {
                 <HeadingLabel text="Featured" />
 
                 <div className="flex items-center justify-between gap-6">
-                    <h2 className="text-4xl font-semibold my-6">
+                    <SectionHeading>
                         Top <span className="text-orange-600">Destinations</span>{" "}
                         For You
-                    </h2>
+                    </SectionHeading>
 
                     <div className="flex items-center gap-x-2">
                         <div className="w-12 h-12 rounded-full border-2 flex items-center justify-center hover:cursor-pointer">
