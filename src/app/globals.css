@@ -4,4 +4,15 @@
 
 @theme {
     --font-sans: "Poppins";
+
+    --animate-slide: slide 9s linear infinite;
+
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
 }
