@@ -1,6 +1,7 @@
 import React from "react";
 import icons from "../icons";
 import Container from "./Container";
+import Slider from "./Slider";
 
 export default function ScrollingOffers() {
     const offers = [
@@ -34,32 +35,21 @@ export default function ScrollingOffers() {
     return (
         <section className="bg-sky-600 text-white py-6">
             <Container>
-                <div className="overflow-hidden text-nowrap group">
-                    <div className="inline-block animate-slide group-hover:[animation-play-state:paused]">
-                        <div className="flex items-center">
-                            {offers.map((offer, i) => (
-                                <div key={i} className="flex items-center gap-x-2 uppercase text-2xl font-semibold px-6">
-                                    <div>{offer.icon}</div>
-                                    <div>
-                                        <a href={offer.link}>{offer.text}</a>
-                                    </div>
+                <Slider>
+                    <div className="flex items-center">
+                        {offers.map((offer, i) => (
+                            <div
+                                key={i}
+                                className="flex items-center gap-x-2 uppercase text-2xl font-semibold px-6"
+                            >
+                                <div>{offer.icon}</div>
+                                <div>
+                                    <a href={offer.link}>{offer.text}</a>
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
-                    <div className="inline-block animate-slide group-hover:[animation-play-state:paused]">
-                        <div className="flex items-center">
-                            {offers.map((offer, i) => (
-                                <div key={i} className="flex items-center gap-x-2 uppercase text-2xl font-semibold px-6">
-                                    <div>{offer.icon}</div>
-                                    <div>
-                                        <a href={offer.link}>{offer.text}</a>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                </Slider>
             </Container>
         </section>
     );

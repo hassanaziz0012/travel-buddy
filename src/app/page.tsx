@@ -5,6 +5,7 @@ import MoreOffers from "./components/MoreOffers";
 import Navbar from "./components/Navbar";
 import Offers from "./components/Offers";
 import Products from "./components/Products";
+import Reviews from "./components/Reviews";
 import ScrollingOffers from "./components/ScrollingOffers";
 import Superheader from "./components/Superheader";
 
@@ -20,6 +21,7 @@ export default function Home() {
             <MoreOffers />
             <ScrollingOffers />
             <Products />
+            <Reviews />
         </div>
     );
 }
