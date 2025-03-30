@@ -35,7 +35,7 @@ export default function FeaturedDestinations() {
             <Container>
                 <HeadingLabel text="Featured" />
 
-                <div className="flex items-center justify-between gap-6">
+                <div className="flex flex-wrap items-center justify-between gap-6 mb-6">
                     <SectionHeading>
                         Top <span className="text-orange-600">Destinations</span>{" "}
                         For You
@@ -51,40 +51,42 @@ export default function FeaturedDestinations() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-6">
+                <div className="flex flex-wrap gap-6">
                     {destinations.map((dest, i) => (
                         <div
                             key={i}
-                            className={`p-5 rounded-2xl text-white ${dest.color}`}
+                            className={`p-5 rounded-2xl text-white basis-0 grow min-w-60 @container ${dest.color}`}
                         >
-                            <div className="relative">
-                                <img
-                                    src={dest.image}
-                                    alt=""
-                                    className="aspect-square w-full object-center object-cover rounded-2xl"
-                                />
+                            <div className="flex flex-col gap-6 @min-xl:flex-row">
+                                <div className="relative basis-0 grow">
+                                    <img
+                                        src={dest.image}
+                                        alt=""
+                                        className="aspect-square w-full object-center object-cover rounded-2xl"
+                                    />
 
-                                <div className="absolute top-3 left-3 px-4 py-2 rounded-md bg-slate-800/70 text-white">
-                                    <span className="text-2xl font-semibold">
-                                        {dest.price}
-                                    </span>{" "}
-                                    / Person
-                                </div>
-                            </div>
-
-                            <div className="mt-6">
-                                <h3 className="text-2xl font-semibold mb-6">
-                                    {dest.title}
-                                </h3>
-
-                                <div className="flex items-center mb-2">
-                                    {icons.location}
-                                    <span>{dest.location}</span>
+                                    <div className="absolute top-3 left-3 px-4 py-2 rounded-md bg-slate-800/70 text-white">
+                                        <span className="text-2xl font-semibold">
+                                            {dest.price}
+                                        </span>{" "}
+                                        / Person
+                                    </div>
                                 </div>
 
-                                <button className="bg-white text-black border-black px-6 py-3 rounded-md hover:cursor-pointer hover:bg-slate-200 duration-300">
-                                    Explore More
-                                </button>
+                                <div className="basis-0 grow">
+                                    <h3 className="text-2xl font-semibold mb-6">
+                                        {dest.title}
+                                    </h3>
+
+                                    <div className="flex items-center mb-2">
+                                        {icons.location}
+                                        <span>{dest.location}</span>
+                                    </div>
+
+                                    <button className="bg-white text-black border-black px-6 py-3 rounded-md hover:cursor-pointer hover:bg-slate-200 duration-300">
+                                        Explore More
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))}

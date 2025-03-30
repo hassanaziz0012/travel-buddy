@@ -44,17 +44,19 @@ export default function Benefits() {
                 </div>
 
                 <div className="mt-12">
-                    <div className="grid grid-cols-3 gap-x-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
                         <div className="flex flex-col gap-y-16">
                             {benefits_g1.map((benefit, i) => (
                                 <Benefit key={i} {...benefit} />
                             ))}
                         </div>
-                        <img
-                            src="/images/benefits.jpg"
-                            alt=""
-                            className="rounded-md w-full"
-                        />
+                        <div className="flex justify-center items-start">
+                            <img
+                                src="/images/benefits.jpg"
+                                alt=""
+                                className="rounded-md w-full min-w-72 max-w-80"
+                            />
+                        </div>
                         <div className="flex flex-col gap-y-16">
                             {benefits_g2.map((benefit, i) => (
                                 <Benefit key={i} {...benefit} />

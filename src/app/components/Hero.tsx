@@ -9,7 +9,7 @@ export default function Hero() {
             <Container>
                 <div className="flex flex-col justify-between gap-y-24">
                     <div>
-                        <h1 className="text-8xl font-bold text-white uppercase max-w-xl mb-12">
+                        <h1 className="text-[clamp(2.25rem,1.179rem+5.357vw,6rem)] font-bold text-white uppercase max-w-xl mb-12">
                             Discover your next destination
                         </h1>
 

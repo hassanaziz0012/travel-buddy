@@ -1,5 +1,7 @@
 import Benefits from "./components/Benefits";
+import CTA from "./components/CTA";
 import FeaturedDestinations from "./components/FeaturedDestinations";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import MoreOffers from "./components/MoreOffers";
 import Navbar from "./components/Navbar";
@@ -24,6 +26,8 @@ export default function Home() {
             <Products />
             <Reviews />
             <Social />
+            <CTA />
+            <Footer />
         </div>
     );
 }
