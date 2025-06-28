@@ -7,8 +7,8 @@ export default function Footer() {
     return (
         <footer className="py-40 bg-slate-900 text-white">
             <Container>
-                <div className="grid grid-cols-4 gap-6">
-                    <div className="col-span-2">
+                <div className="flex flex-wrap gap-12">
+                    <div className="basis-0 grow-[2]">
                         <p className="text-2xl font-semibold mb-6">
                             Travel<span className="text-orange-600">Buddy</span>
                         </p>
@@ -18,12 +18,12 @@ export default function Footer() {
                             incidunt ipsum soluta, ipsa amet.
                         </p>
 
-                        <div className="flex items-center gap-x-2">
+                        <div className="flex items-center flex-wrap gap-2">
                             <input
                                 type="email"
                                 name="email"
                                 id="email"
-                                className="px-4 py-2 rounded-lg border border-slate-400"
+                                className="px-4 py-2 rounded-lg border border-slate-400 w-full min-w-56 max-w-72"
                                 placeholder="Enter your email"
                             />
                             <PrimaryButton>Subscribe</PrimaryButton>
@@ -57,7 +57,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="basis-0 grow">
                         <h4 className="text-xl font-semibold mb-6">
                             Quick Links
                         </h4>
@@ -81,7 +81,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="basis-0 grow">
                         <h4 className="text-xl font-semibold mb-6">
                             Customer Support
                         </h4>
@@ -108,8 +108,8 @@ export default function Footer() {
 
                 <hr className="my-16 border-slate-700" />
 
-                <div className="flex items-center justify-between gap-6 text-slate-300">
-                    <div>Designed by, <a href="https://www.hassandev.me" className="text-orange-600">Hassan Aziz</a></div>
+                <div className="flex items-center justify-between gap-6 flex-wrap text-slate-300">
+                    <div>Designed by, <a href="https://www.hassandev.me" className="text-orange-600 underline">Hassan Aziz</a></div>
                     <div>Copyright &copy; 2025, All Rights Reserved</div>
                     <div>
                         <button className="flex items-center hover:cursor-pointer">

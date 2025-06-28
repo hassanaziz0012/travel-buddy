@@ -8,8 +8,8 @@ export default function Offers() {
     return (
         <section className="py-40 bg-orange-50">
             <Container>
-                <div className="grid grid-cols-2 gap-6">
-                    <div>
+                <div className="flex flex-wrap gap-12">
+                    <div className="basis-96 grow">
                         <HeadingLabel text="Offers" />
                         <SectionHeading>
                             Save on{" "}
@@ -27,13 +27,13 @@ export default function Offers() {
 
                         <WhiteExternalButton text="Explore More" bordered />
                     </div>
-                    <div className="relative">
+                    <div className="relative basis-96 grow flex flex-col items-center">
                         <img
                             src="/images/offers-1.jpg"
                             alt=""
-                            className="rounded-lg"
+                            className="rounded-lg w-full max-w-2xl"
                         />
-                        <div className="absolute -bottom-12 left-6 right-6 p-5 bg-white shadow-lg rounded-lg text-gray-600">
+                        <div className="mt-8 sm:mt-0 sm:absolute -bottom-12 left-6 right-6 p-5 bg-white shadow-lg rounded-lg text-gray-600">
                             <p className="italic mb-4">
                                 &ldquo;Ocean Breeze Resort was the perfect getaway! The
                                 stunning ocean views, luxurious amenities, and

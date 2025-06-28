@@ -32,9 +32,9 @@ export default function Products() {
                     <span className="text-orange-600">Essentials</span>
                 </SectionHeading>
 
-                <div className="flex gap-x-6 mt-20">
+                <div className="flex flex-wrap gap-x-6 gap-y-20 mt-20">
                     {products.map((product, i) => (
-                        <div key={i} className="basis-0 grow group hover:cursor-pointer">
+                        <div key={i} className="basis-0 grow min-w-56 max-w-64 group hover:cursor-pointer">
                             <div className="p-5 rounded-xl border h-full overflow-hidden">
                                 <img src={product.image} alt="" className="w-full h-full object-contain object-center group-hover:scale-115 duration-300" />
                             </div>

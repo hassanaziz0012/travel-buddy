@@ -33,9 +33,9 @@ export default function Social() {
                     Follow Our <span className="text-orange-600">Travels</span>
                 </SectionHeading>
 
-                <div className="flex gap-6 mt-20">
+                <div className="flex flex-wrap justify-center gap-x-6 gap-y-20 mt-20">
                     {posts.map((post, i) => (
-                        <div key={i} className="basis-0 grow">
+                        <div key={i} className="basis-0 grow min-w-64 max-w-128">
                             <div className="relative h-full overflow-hidden rounded-2xl group">
                                 <div className="absolute top-0 bottom-0 left-0 right-0 bg-white flex items-center justify-center opacity-0 group-hover:opacity-80 duration-300 z-10">
                                     <WhiteExternalButton text="Explore More" bordered />

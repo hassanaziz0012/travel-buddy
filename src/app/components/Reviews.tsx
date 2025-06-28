@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Container from "./Container";
 import HeadingLabel from "./HeadingLabel";
 import SectionHeading from "./SectionHeading";
 import Slider from "./Slider";
+import icons from "../icons";
 
 export default function Reviews() {
     const reviews = [
@@ -32,6 +34,8 @@ export default function Reviews() {
         },
     ];
 
+    const [pause, setPause] = useState(false);
+
     const colors = [
         "bg-sky-300",
         "bg-emerald-300",
@@ -42,6 +46,10 @@ export default function Reviews() {
     const getColor = () => {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         return randomColor;
+    };
+
+    const pauseAnimation = () => {
+        setPause(!pause);
     };
 
     return (
@@ -55,8 +63,8 @@ export default function Reviews() {
             </Container>
 
             <div className="mt-20 relative">
-                <div className="absolute top-0 bottom-0 left-0 z-10 w-80 bg-gradient-to-r from-orange-50/75 to-transparent from-30%"></div>
-                <Slider>
+                <div className="absolute top-0 bottom-0 left-0 z-10 sm:w-40 xl:w-80 bg-gradient-to-r from-orange-50/75 to-transparent from-30%"></div>
+                <Slider pause={pause}>
                     <div className="flex text-wrap">
                         {reviews.map((review, i) => (
                             <div
@@ -72,7 +80,16 @@ export default function Reviews() {
                         ))}
                     </div>
                 </Slider>
-                <div className="absolute top-0 bottom-0 right-0 z-10 w-80 bg-gradient-to-l from-orange-50/75 to-transparent from-30%"></div>
+                <div className="absolute top-0 bottom-0 right-0 z-10 sm:w-40 xl:w-80 bg-gradient-to-l from-orange-50/75 to-transparent from-30%"></div>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center">
+                <button
+                    className="bg-black text-white p-3 rounded-full"
+                    onClick={pauseAnimation}
+                >
+                    {pause === true ? icons.play : icons.pause}
+                </button>
             </div>
         </section>
     );

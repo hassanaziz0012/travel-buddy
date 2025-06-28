@@ -40,7 +40,7 @@ export default function ScrollingOffers() {
                         {offers.map((offer, i) => (
                             <div
                                 key={i}
-                                className="flex items-center gap-x-2 uppercase text-2xl font-semibold px-6"
+                                className="flex items-center gap-x-2 uppercase text-[clamp(1.125rem,0.938rem+0.625vw,1.5rem)] font-semibold px-6"
                             >
                                 <div>{offer.icon}</div>
                                 <div>
